@@ -1,0 +1,2226 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+@font-face {
+    font-family:'bodoni';
+    src: url(fonts/BodoniFLF-Bold.ttf);
+}
+*{
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+    font-family: 'poppins',sans-serif;
+    
+}
+
+body{
+    overflow-x: hidden;
+    .nerveSticker{
+        display: none;
+    }
+    .bodyPicUno,.bodyPicDos,.bodyPicTres,.bodyPicCuatro,.bodyPicCinco,.bodyPicSeis{
+        position: absolute;
+        height: 30vh;
+        width: 20vw;
+        object-fit: cover;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        display: none;
+     }
+}
+#header{
+    height: 50vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows:10vh  37vh 3.1vh;
+    //El nav de la pagina
+    .topHeader__container{
+        background:#f7f6f4 ;
+        display: grid;
+        grid-template-rows:1fr ;
+        grid-template-columns: 4fr 6fr;
+
+        .rightWing{
+            position: absolute;
+            right: -18.4vh;
+            top: .1vh;
+            display: none;
+            
+        }
+
+        .leftWing{
+            position: absolute;
+            left: -18.4vh;
+            top: .1vh;
+            display: none;
+            
+        }
+       
+
+
+        //Logo
+        .logo__container{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .logo{
+                height: 60%;
+                width: 80%;
+                object-fit: contain;
+            }
+        }
+
+        //Menu
+        .menu__container{
+
+            height: 100%;
+            width: 100%;
+            grid-row: 1/2;
+            grid-column:2/3;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            .bars{
+                height: 1.6rem;
+                width: 1.6rem;
+                transform: translateX(-1.5rem);
+            }
+        }
+    }
+    //TopBar
+    .headerTopBar{
+        background-color: #1c1c1c;
+    }
+    //ShinjiEyesContainer
+    .headerArt__container{
+        
+        background-color: rgb(53, 72, 251);
+        animation-name:colorChanging;
+        animation-duration: 15s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-timing-function: linear;
+        overflow: hidden;
+        .headerArt{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        @keyframes colorChanging{
+            0%{
+                background-color: rgb(53, 218, 251);
+            }
+            20%{
+                background-color: rgb(53, 72, 251);
+            }
+            40%{
+                background-color: rgb(152, 53, 251);
+            }
+            60%{
+                background-color: rgb(251, 53, 53);
+            }
+            64%{
+                background-color: rgb(251, 145, 53);
+            }
+            80%{
+                background-color: rgb(251, 244, 53);
+            }
+            96%{
+                background-color: rgb(76, 250, 97);
+            }
+            100%{
+                background-color: rgb(53, 218, 251);
+            }
+
+        }
+    }
+    //BottomBar
+    .headerBotAnimatedBar{
+        background-color: #1c1c1c;
+        display: flex;
+        height: 100%;
+        width: 100%;
+        overflow: hidden;
+
+        .headerBotNames__container{
+            height: 100%;
+            width: 200vw;
+            align-items: center;
+            position: relative;
+            display: flex;
+            animation-name: infiniteSlide;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+
+            span{
+                margin-right:1rem ;
+                color: #f7f6f4;
+                font-size: .8rem;
+                display: flex;
+                text-align: center;
+                white-space: nowrap;
+            }
+
+            @keyframes infiniteSlide{
+                from{
+                    right: 200%;
+                }
+
+                to{
+                    right: -100%;
+                }
+            }
+        }
+    }
+
+}
+
+#main{
+
+    .firstSection__container{
+        height: 50vh;
+        width:100%;
+        position: relative;
+        background-size:cover;
+        background-position: center center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:center;
+
+
+        
+
+        @keyframes palpito{
+            from{
+                opacity : .1
+            }
+
+            to{
+                opacity: 1;
+            }
+        }
+
+        .sinopsis__container{
+            height: 100%;
+            width:100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            flex-flow:column;
+            background-color: #f7f6f4;
+            opacity: 1;
+            box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            -webkit-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            -moz-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            
+            .info__container{
+            width: 90%;
+            display: flex;
+            align-items:center;
+            justify-content:center;
+            font-weight: bolder;
+           
+           
+
+            .info__container-info{
+                text-align: center;
+                letter-spacing: 1px;
+                font-size:1rem;
+                z-index: 1;
+             
+            }
+
+            
+        }
+
+            
+        }   
+        .sinopsis__container-desktop{
+            display: none;
+        }
+
+    
+        
+    }
+
+    .firstBarrera{
+        height: 3vh;
+        background-color: #1c1c1c;
+        overflow: hidden;
+        
+
+        .firstBarreraNames{
+            height: 100%;
+            width: 200vw;
+            align-items: center;
+            position: relative;
+            display: flex;
+            animation-name: infiniteSlide;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+            span{
+                margin-right:1rem ;
+                color: #f7f6f4;
+                font-size: .8rem;
+                display: flex;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
+    .secondBarrera{
+        grid-column: 1/5;
+        grid-row: 5/6;
+        height: 100%;
+        background-color: #1c1c1c;
+        overflow: hidden;
+        display: none;
+        
+
+        .secondBarreraNames{
+            height: 100%;
+            width: 200vw;
+            align-items: center;
+            position: relative;
+            display: flex;
+            animation-name: infiniteSlide;
+            animation-duration: 10s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+
+            span{
+                margin-right:1rem ;
+                color: #f7f6f4;
+                font-size: .8rem;
+                display: flex;
+                text-align: center;
+                white-space: nowrap;
+            }
+        }
+    }
+    .secondSectionDesktopVideo__container{
+        grid-row:3/5 ;
+        grid-column:3/6;
+        background-color: red;
+        height: 100%;
+        width: 100%;
+        display: none;
+        
+        .rightTriangle{
+            display: none;
+        }
+        
+
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            
+        }
+    }
+    .secondSection__container{
+        height: 50vh;
+        display:flex;
+
+        .leftTriangle{
+            display: none;
+        }
+
+        .slider__container{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            width: 100%;
+
+            .slider{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                overflow: hidden;
+
+        .personajes{
+            transition: 1s;
+        }
+        
+                
+        //ASUKA
+        .asukaSection__container{
+                    background-color: #e94148;
+                    height: 50vh;
+                    min-width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows:25vh 25vh;
+
+                    .asuka__container{
+                        grid-row: 1/4;
+                        grid-column:1/2;
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        justify-content: space-between;
+                        
+
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            
+                        }
+                    }
+                    .asukaInfo__container{
+                        display: flex;
+                        flex-flow:column;
+                        justify-content:center;
+                        grid-row: 1/2;
+                        grid-column:2/3;
+                        background-color: #f7f6f4;
+                        margin: 2rem 1rem;
+                        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                        border-radius: 3px ;
+
+                        //Nombre Asuka
+                        h3{
+                            color: #000;
+                            text-align: center;
+                            font-size: 1rem;
+                        }
+                        //Info asuka
+                        span{
+                            color: #000;
+                            text-align: center;
+                            font-size: .8rem;
+                        }
+                        
+                    }
+                    //Asuka Video
+                    .asukaVideo__container{
+                        grid-row: 2/3;
+                        grid-column:2/3;
+                        background-color: red;
+                        border: solid #000 2px;
+
+                        video{
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                }
+        //REI 
+        .reiSection__container{
+                    background-color: #b5d7fb ;
+                    height: 100%;
+                    min-width: 100%;
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-rows:25vh 25vh;
+                    overflow: hidden;
+
+                    .rei__container{
+                        grid-row: 1/4;
+                        grid-column:2/3;
+                        display: flex;
+                        flex-flow: column;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        img{
+                            height: 100%;
+                            width: 100%;
+                            object-fit: cover;
+                            
+                        }
+                    }
+
+                    .reiInfo__container{
+                        display: flex;
+                        flex-flow:column;
+                        justify-content:center;
+                        grid-row: 1/2;
+                        grid-column:1/2;
+                        background-color: #f7f6f4;
+                        margin: 2rem 1rem;
+                        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                        border-radius: 3px ;
+
+                        //Nombre Rei
+                        h3{
+                            color: #000;
+                            text-align: center;
+                            font-size: 1rem;
+                        }
+                        //Info Rei
+                        span{
+                            color: #000;
+                            text-align: center;
+                            font-size: .8rem;
+                        }
+                        
+                    }
+                    .reiVideo__container{
+                        grid-row: 2/3;
+                        grid-column:1/2;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-top: #1c1c1c solid 2px;
+                        border-bottom: #1c1c1c solid 2px;
+                        video{
+                            object-fit: cover;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    
+                }
+        //SHINJI
+        .shinjiSection__container{
+            background-color: #428ad6;
+            height: 50vh;
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:25vh 25vh;
+            overflow: hidden;
+
+            .shinji__container{
+                grid-row: 1/4;
+                grid-column:1/2;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-between;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    
+                }
+            }
+
+            .shinjiInfo__container{
+                display: flex;
+                flex-flow:column;
+                justify-content:center;
+                grid-row: 2/3;
+                grid-column:2/3;
+                background-color: #f7f6f4;
+                margin: 2rem 1rem;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                border-radius: 3px ;
+
+                //Nombre shinji
+                h3{
+                    color: #000;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+                //Info shinji
+                span{
+                    color: #000;
+                    text-align: center;
+                    font-size: .8rem;
+                }
+                
+            }
+            .shinjiVideo__container{
+                grid-row: 1/2;
+                grid-column:2/3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-bottom: solid #1c1c1c 2px ;
+                border-left:solid #1c1c1c 2px  ;
+                video{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }      
+        //MARI
+        .mariSection__container{
+            background-color:rgb(255, 170, 184);
+            height: 50vh;
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:25vh 25vh;
+            overflow: hidden;
+
+            .mari__container{
+                grid-row: 1/4;
+                grid-column:2/3;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-between;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    
+                }
+            }
+
+            .mariInfo__container{
+                display: flex;
+                flex-flow:column;
+                justify-content:center;
+                grid-row: 1/2;
+                grid-column:1/2;
+                background-color: #f7f6f4;
+                margin: 2rem 1rem;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                border-radius: 3px;
+
+                //Nombre mari
+                h3{
+                    color: #000;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+                //Info mari
+                span{
+                    color: #000;
+                    text-align: center;
+                    font-size: .8rem;
+                }
+                
+            }
+            .mariVideo__container{
+                grid-row: 2/3;
+                grid-column:1/2;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top: solid #1c1c1c 2px ;
+                border-right:solid #1c1c1c 2px  ;
+                video{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        //KAWORU
+        .kaworuSection__container{
+            background-color:#f7f6f4;
+            height: 50vh;
+            min-width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows:25vh 25vh;
+            overflow: hidden;
+
+            .kaworu__container{
+                grid-row: 1/4;
+                grid-column:1/2;
+                display: flex;
+                flex-flow: column;
+                align-items: center;
+                justify-content: space-between;
+
+                img{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    
+                }
+            }
+
+            .kaworuInfo__container{
+                display: flex;
+                flex-flow:column;
+                justify-content:center;
+                grid-row: 1/2;
+                grid-column:2/3;
+                background-color: #f7f6f4;
+                margin: 2rem 1rem;
+                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                border-radius: 3px;
+
+                //Nombre kaworu
+                h3{
+                    color: #000;
+                    text-align: center;
+                    font-size: 1rem;
+                }
+                //Info kaworu
+                span{
+                    color: #000;
+                    text-align: center;
+                    font-size: .8rem;
+                }
+                
+            }
+            .kaworuVideo__container{
+                grid-row: 2/3;
+                grid-column:2/3;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-top: solid #1c1c1c 2px ;
+                border-left:solid #1c1c1c 2px  ;
+                video{
+                    object-fit: cover;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            
+        }
+            }
+        }
+        
+        
+        
+    }
+    .characterButtons{
+        height: 5vh;
+        background-color: #fff;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        border-top:solid #1c1c1c 2px;
+
+        .names__container{
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+
+            .nombres{
+                transition: 1s;
+            }
+
+            .asukaName{
+                color: #000;
+                position: relative;
+                top:4px;
+                
+            }
+            .reiName{
+                color: #000;
+                position: relative;
+                top:4px;
+            }
+            .shinjiName{
+                color: #000;
+                position: relative;
+                top:4px;
+            }
+            .mariName{
+                color: #000;
+                position: relative;
+                top:4px;
+            }
+            .kaworuName{
+                color: #000;
+                position: relative;
+                top:4px;
+                
+            }
+        }
+
+        .leftButton{
+            font-size: 1.5rem;
+            margin-left:1rem ;
+            color: #000;
+            position: relative;
+            top: 4px;
+            cursor: pointer;
+            
+        }
+
+        .rightButton{
+            font-size: 1.5rem;
+            margin-right:1rem;
+            color: #000;
+            position: relative;
+            top: 4px;
+            cursor:pointer;
+         
+        }
+    }
+
+    .thirdSection__container{
+        height: 50vh;
+        background-color: #f7f6f4;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .thirdSection{
+            height: 100%;
+            width: 100%;
+            position: relative;
+
+            .thirdSection__container-topDeco-black{
+                display: none;
+            }
+
+            .thirdSection__container-topDeco{
+            position: absolute;
+            top: -1px;
+            object-fit: contain;
+            width: 100%;
+            
+        }
+
+        .thirdSection__container-botDeco{
+            position: absolute;
+            bottom: -2px;
+            object-fit: contain;
+            width: 100%;
+        }
+
+        video{
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        }
+        
+    }
+
+    .midBarrera__container{
+        height: 5vh;
+        background-color: #fff;
+        .midBarrera{
+            height: 100%;
+            width:100%;
+            position: relative;
+
+            
+        }
+    }
+    .fourthSection__container{
+        height: 50vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fourthSection{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            overflow:hidden;
+            justify-content: center;
+            align-items:flex-start;
+            background-image: url(imgs/EvanegelionPoster.png);
+            background-size: cover;
+            background-position: center center;
+            position: relative;
+
+            video{
+                display: none;
+            }
+
+            .secondBotDecoration{
+                position: absolute;
+                bottom: -3px;
+                width: 100%;
+            }
+
+            .secondBotDecorationDos{
+                display: none;
+            }
+            
+
+            
+
+            
+
+            
+        }
+    }
+
+    .fifthSection__container{
+        height: 80vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .fifthSection__container-topDeco{
+            display: none;
+        }
+
+
+        .fifthSection{
+            height: 100%;
+            width: 100%;
+            background-color: #000;
+            position: relative;
+
+            
+            .fifthSectionVideo__container{
+                height: 100%;
+                width: 100%;
+
+                video{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    .sixthSection__container{
+        display: none;
+    }
+    .sevenSection__container{
+        display: none;
+    }
+
+    .eightSection__container{
+        display: none;
+
+        .eightSectionBotDeco{
+            display: none;
+        }
+
+        .eightSectionTopDeco{
+            display: none;
+        }
+    }
+}
+
+#footer{
+    height: 40vh;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .footer__container{
+        background-color: #1c1c1c;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        justify-content:center;
+        position: relative;
+        height: 100%;
+        width: 100%;
+
+        .footerTopDecoration{
+            position: absolute;
+            width: 100%;
+            top: 0px;
+        }
+
+        
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@font-face {
+    font-family: 'droid' ;
+    src: url(fonts/android_7.ttf);
+}
+
+
+@media only screen and (min-width:1000px){
+    
+    body{
+    background-color: #fff;
+     display: flex;
+     flex-flow: column;
+     align-items: center;
+     justify-content: center;
+     width: 100vw;
+     position: relative;
+
+     .bodyPicUno,.bodyPicDos,.bodyPicTres,.bodyPicCuatro,.bodyPicCinco,.bodyPicSeis{
+        opacity: 1;
+        position: absolute;
+        height: 30vh;
+        width: 20vw;
+        object-fit: cover;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        display: block;
+     }
+
+     .bodyPicUno,.bodyPicTres,.bodyPicCinco{
+        right: 2vw;
+     }
+
+     .bodyPicDos,.bodyPicCuatro,.bodyPicSeis{
+        left: 3vw;
+     }
+
+     .bodyPicUno{
+        top: 100vh;
+     }
+     .bodyPicDos{
+        top: 150vh;
+     }
+     .bodyPicTres{
+        top: 200vh;
+     }
+     .bodyPicCuatro{
+        top: 250vh;
+     }
+     .bodyPicCinco{
+        top: 300vh;
+     }
+     .bodyPicSeis{
+        top: 350vh;
+     }
+     
+
+     //LeftWing
+     
+
+    #header{
+        
+        height:94vh;
+        width: 50%;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 20vh 70vh 4vh;
+        
+
+        
+        
+        //El nav de la pagina
+        .topHeader__container{
+    
+            background:#fffefa;
+            display: flex ;
+            align-items: center;
+            justify-content:center;
+            grid-row: 1/2;
+            grid-column: 1/2;
+            width: 100%;
+            position: relative;
+
+            .rightWing{
+                position: absolute;
+                right: -18.4vh;
+                top: .2vh;
+                display: block;
+                height: 20vh;
+                
+            }
+
+            .leftWing{
+                position: absolute;
+                right: -17.6vh;
+                top: .2vh;
+                display: block;
+                height: 20vh;
+
+                
+            }
+            
+            
+    
+    
+            //Logo
+            .logo__container{
+                height: 100%;
+                width: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+    
+                .logo{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: contain;
+
+                    
+                }
+            }
+    
+            //Menu
+            .menu__container{
+    
+                height: 100%;
+                width: 100%;
+                grid-row: 1/2;
+                grid-column:2/3;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+    
+                .bars{
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    transform: translateX(-1.5rem);
+                }
+            }
+        }
+        //TopBar
+        .headerTopBar{
+            background-color: #1c1c1c;
+        }
+        //ShinjiEyesContainer
+        .headerArt__container{
+            grid-row:2/3;
+            grid-column: 1/2;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: linear;
+            overflow: hidden;
+            background-position: center bottom;
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 100%;
+            background-image: url(imgs/headerDesktopPivc.jpg);
+            border-right: solid #000 3px;
+        border-left: solid #000 3px;
+            
+            
+            .headerArt{
+                display: none;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+    
+            @keyframes colorChanging{
+                0%{
+                    background-color: rgb(53, 218, 251);
+                }
+                20%{
+                    background-color: rgb(53, 72, 251);
+                }
+                40%{
+                    background-color: rgb(152, 53, 251);
+                }
+                60%{
+                    background-color: rgb(251, 53, 53);
+                }
+                64%{
+                    background-color: rgb(251, 145, 53);
+                }
+                80%{
+                    background-color: rgb(251, 244, 53);
+                }
+                96%{
+                    background-color: rgb(76, 250, 97);
+                }
+                100%{
+                    background-color: rgb(53, 218, 251);
+                }
+    
+            }
+        }
+        //BottomBar
+        .headerBotAnimatedBar{
+            grid-row: 3/4;
+            background-color: #1c1c1c;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            border-right: solid #000 3px;
+            border-left: solid #000 3px;
+            
+    
+            .headerBotNames__container{
+                height: 100%;
+                width: 200vw;
+                align-items: center;
+                position: relative;
+                display: flex;
+                animation-name: infiniteSlide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+    
+    
+                span{
+                    margin-right:1rem ;
+                    color: #f7f6f4;
+                    font-size: 1.5rem;
+                    display: flex;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+    
+                @keyframes infiniteSlide{
+                    from{
+                        right: 200%;
+                    }
+    
+                    to{
+                        right: -100%;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+    #main{
+        width: 50%;
+        display: grid;
+        grid-template-columns: 50% 50% ;
+        grid-template-rows: 80vh 4vh 60vh 4vh 4vh 80vh 80vh 60vh 50vh ;
+        
+        .firstSection__container{
+            border-right: solid #000 2px;
+        border-left: solid #000 2px;
+            background-color: #000;
+            grid-row: 1/2;
+            grid-column: 1/5;
+            height: 50vh;
+            width:100%;
+            position: relative;
+            display: none;
+            grid-template-columns: 1fr 1fr ;
+            grid-template-rows: 1fr;
+            border-right: #1c1c1c 2px solid;        
+    
+            @keyframes palpito{
+                from{
+                    opacity : .1
+                }
+    
+                to{
+                    opacity: 1;
+                }
+            }
+    
+            .sinopsis__container{
+                height: 100%;
+                width:100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-flow:column;
+                background-color: #f7f6f4;
+                opacity: 1;
+                display: none;
+                
+                
+                .info__container{
+                width: 90%;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                
+                
+               
+               
+    
+                .info__container-info{
+                    text-align: center;
+                    letter-spacing: 1px;
+                    font-size:2rem;
+                    z-index: 1;
+                    font-weight: bolder;
+                    font-family: 'droid', Times, serif;
+                 
+                }
+    
+                
+            }   
+    
+            
+    
+            
+    
+                
+            }
+
+            .sinopsis__container-desktop{
+                background-color: #f7f6f4;
+                height: 50vh;
+                width:50%;
+                display: none;
+                grid-template-columns: 25vw 25vw;
+                grid-template-rows: 1fr;
+                grid-row:1/2;
+                grid-column: 2/4;
+
+                
+
+                .sinopsisShinji__container{
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    grid-column: 1/2;
+                    grid-row: 1/2;
+                    .sinopsisShinjiImg__container{
+                        height: 90%;
+                        width: 100%;
+                        border-right: 2px solid #000;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        
+
+                        img{
+                            height: 90%;
+                            border-radius: 3px;
+                            width: 90%;
+                            object-fit: cover;
+                            
+                        }
+                    }
+
+                }
+
+                .sinopsisInfo__container{
+                    background-color: #f7f6f4;
+                    grid-row: 1/2;
+                    grid-column: 2/3;
+                    display: flex;
+                    height: 100%;
+                    width: 100%;
+                    align-items: center;
+                    justify-content: center;
+
+                    .sinopsisInfo{
+                        height: 100%;
+                        width: 80%;
+                        display: flex;
+                        align-items:center;
+                        justify-content:center;
+
+                        span{
+                            text-align: center;
+                            font-size: .8rem;
+                            color: #000;
+                            font-weight: bolder;
+                            
+                        }
+                    }
+
+
+                }
+            }
+        }
+    
+        .firstBarrera{
+            border-right: solid #000 2px;
+        border-left: solid #000 2px;
+            grid-column: 1/5;
+            grid-row: 2/3;
+            height: 100%;
+            background-color: #1c1c1c;
+            overflow: hidden;
+            
+    
+            .firstBarreraNames{
+                height: 100%;
+                width: 200vw;
+                align-items: center;
+                position: relative;
+                display: flex;
+                animation-name: infiniteSlide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+    
+                span{
+                    margin-right:1rem ;
+                    color: #f7f6f4;
+                    font-size: 1.5rem;
+                    display: flex;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+
+        .secondSectionDesktopVideo__container{
+            
+            
+            border-right:  solid #000 3px;
+            grid-row:3/4 ;
+            grid-column:2/3;
+            background-color: red;
+            height: 100%;
+            width: 100%;
+            display: block;
+            position: relative;
+
+            .rightTriangle{
+                position: absolute;
+                top: 0;
+                left: 0;
+                display: block;
+            }
+            
+            
+
+           .secondSectionDesktopVideo__container-video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                
+            }
+        }
+
+        .secondSection__container{
+           
+            border-left: solid #000 3px;
+            grid-row: 3/4;
+            grid-column: 1/2;
+            height: 100%;
+            display:flex;
+            position: relative;     
+
+            .leftTriangle{
+                position: absolute;
+                top: 0;
+                right: 0;
+                display: block;
+                z-index: 2;
+            }
+    
+            .slider__container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+    
+                .slider{
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    overflow: hidden;
+    
+            .personajes{
+                transition: 1s;
+            }
+            
+                    
+            //ASUKA
+            .asukaSection__container{
+                        background-color: #e94148;
+                        height: 100%;
+                        min-width: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows:1fr 1fr;
+    
+                        .asuka__container{
+                            grid-row: 1/4;
+                            grid-column:1/2;
+                            display: flex;
+                            flex-flow: column;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+    
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                                
+                            }
+                        }
+                        .asukaInfo__container{
+                            margin: 0px;
+                            display: flex;
+                            flex-flow:column;
+                            justify-content:center;
+                            grid-row: 2/3;
+                            grid-column:2/3;
+                            background-color: #f7f6f4;
+                            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            border-radius: 0px ;
+                            border: #1c1c1c solid 1px;
+                            
+    
+                            //Nombre Asuka
+                            h3{
+                                color: #000;
+                                text-align: center;
+                                font-size: 1rem;
+                            }
+                            //Info asuka
+                            span{
+                                color: #000;
+                                text-align: center;
+                                font-size: 1rem;
+                            }
+                            
+                        }
+                        //Asuka Video
+                        .asukaVideo__container{
+                            grid-row: 2/3;
+                            grid-column:2/3;
+                            background-color: red;
+                            border: solid #000 2px;
+                            display: none;
+    
+                            video{
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                    }
+            //REI 
+            .reiSection__container{
+                        background-color: #b5d7fb ;
+                        height: 100%;
+                        min-width: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows:1fr 1fr;
+                        overflow: hidden;
+    
+                        .rei__container{
+                            grid-row: 1/4;
+                            grid-column:1/3;
+                            display: flex;
+                            flex-flow: column;
+                            align-items: center;
+                            justify-content: space-between;
+    
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: contain;
+                                
+                            }
+                        }
+    
+                        .reiInfo__container{
+                            margin: 0px;
+                            display: flex;
+                            flex-flow:column;
+                            justify-content:center;
+                            grid-row: 2/3;
+                            grid-column:1/2;
+                            background-color: #f7f6f4;
+                            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            border-radius: 0px ;
+                            border: #1c1c1c solid 1px;
+       
+    
+                            //Nombre Rei
+                            h3{
+                                color: #000;
+                                text-align: center;
+                                font-size: 1rem;
+                            }
+                            //Info Rei
+                            span{
+                                color: #000;
+                                text-align: center;
+                                font-size: 1rem;
+                            }
+                            
+                        }
+                        .reiVideo__container{
+                            grid-row: 2/3;
+                            grid-column:1/2;
+                            display: none;
+                            align-items: center;
+                            justify-content: center;
+                            border-top: #1c1c1c solid 2px;
+                            border-bottom: #1c1c1c solid 2px;
+                            video{
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        
+                    }
+            //SHINJI
+            .shinjiSection__container{
+                background-color: #428ad6;
+                height: 100%;
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:1fr 1fr ;
+                overflow: hidden;
+    
+                .shinji__container{
+                    grid-row: 1/3;
+                    grid-column:1/2;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        
+                    }
+                }
+    
+                .shinjiInfo__container{
+                    margin: 0px;
+                    display: flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    grid-row: 1/2;
+                    grid-column:2/3;
+                    background-color: #f7f6f4;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    border-radius: 0px ;
+                    border: #1c1c1c solid 1px;
+    
+                    //Nombre shinji
+                    h3{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    //Info shinji
+                    span{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    
+                }
+                .shinjiVideo__container{
+                    grid-row: 1/2;
+                    grid-column:2/3;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: solid #1c1c1c 2px ;
+                    border-left:solid #1c1c1c 2px  ;
+                    video{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }      
+            //MARI
+            .mariSection__container{
+                background-color:rgb(255, 170, 184);
+                height: 100%;
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:1fr 1fr;
+                overflow: hidden;
+    
+                .mari__container{
+                    grid-row: 1/4;
+                            grid-column:1/2;
+                            display: flex;
+                            flex-flow: column;
+                            align-items: center;
+                            justify-content: space-between;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        
+                    }
+                }
+    
+                .mariInfo__container{
+                    margin: 0px;
+                    display: flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    grid-row: 2/3;
+                    grid-column:2/3;
+                    background-color: #f7f6f4;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    border-radius: 0px ;
+                    border: #1c1c1c solid 1px;
+                    
+                    
+                    //Nombre mari
+                    h3{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    //Info mari
+                    span{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    
+                }
+                .mariVideo__container{
+                    grid-row: 2/3;
+                    grid-column:1/2;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: solid #1c1c1c 2px ;
+                    border-right:solid #1c1c1c 2px  ;
+                    video{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            //KAWORU
+            .kaworuSection__container{
+                background-color:#f7f6f4;
+                height: 100%;
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:1fr 1fr;
+                overflow: hidden;
+    
+                .kaworu__container{
+                    grid-row: 1/4;
+                    grid-column:1/2;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        
+                    }
+                }
+    
+                .kaworuInfo__container{
+                    margin: 0px;
+                    display: flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    grid-row: 2/3;
+                    grid-column:2/3;
+                    background-color: #f7f6f4;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    border-radius: 0px ;
+                    border: #1c1c1c solid 1px;
+                    
+    
+                    //Nombre kaworu
+                    h3{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    //Info kaworu
+                    span{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    
+                }
+                .kaworuVideo__container{
+                    grid-row: 2/3;
+                    grid-column:2/3;
+                    display: none;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: solid #1c1c1c 2px ;
+                    border-left:solid #1c1c1c 2px  ;
+                    video{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+    
+                
+            }
+                }
+            }
+            
+            
+            
+        }
+        .secondBarrera{
+            border-right: solid #000 2px;
+        border-left: solid #000 2px;
+            grid-column: 3/5;
+            grid-row: 5/6;
+            height: 100%;
+            background-color: #1c1c1c;
+            overflow: hidden;
+            display: none;
+            
+    
+            .secondBarreraNames{
+                height: 100%;
+                width: 200vw;
+                align-items: center;
+                position: relative;
+                display: flex;
+                animation-name: infiniteSlide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+    
+                span{
+                    margin-right:1rem ;
+                    color: #f7f6f4;
+                    font-size: .8rem;
+                    display: flex;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .characterButtons{
+            border-right: solid #000 3px;
+        border-left: solid #000 3px;
+            grid-row: 4/5;
+            grid-column: 1/3;
+            height: 4vh;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: relative;
+            border-top: none;
+            
+            
+
+    
+            .names__container{
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+    
+                .nombres{
+                    transition: 1s;
+                }
+    
+                .asukaName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                    
+                }
+                .reiName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                }
+                .shinjiName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                }
+                .mariName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                }
+                .kaworuName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                    
+                }
+            }
+    
+            .leftButton{
+                font-size: 1.5rem;
+                margin-left:1rem ;
+                color: #000;
+                position: relative;
+                top: 4px;
+                
+            }
+    
+            .rightButton{
+                font-size: 1.5rem;
+                margin-right:1rem;
+                color: #000;
+                position: relative;
+                top: 4px;
+             
+            }
+        }
+    
+        .thirdSection__container{
+            border-right: solid #000 3px;
+        border-left: solid #000 3px;
+            grid-row: 1/2;
+            grid-column: 1/3;
+            height: 100%;
+            background-color: #f7f6f4;
+            position: relative;
+            display: flex;
+            align-items: center;
+    
+            .thirdSection{
+                height: 100%;
+                width: 100%;
+                position: relative;
+    
+                .thirdSection__container-topDeco{
+                position: absolute;
+                top: -1px;
+                object-fit: contain;
+                width: 100%;
+                display: none;
+                
+            }
+
+            .thirdSection__container-topDeco-black{
+                position: absolute;
+                top: -1px;
+                object-fit: cover;
+                width: 100%;
+                display: none;
+            }
+    
+            .thirdSection__container-botDeco{
+                position: absolute;
+                bottom: -5px;
+                object-fit: contain;
+                width: 100%;
+                display: none;
+            }
+    
+            video{
+                height: 100%;
+                width: 99.99%;
+                object-fit: cover;
+            }
+    
+            }
+            
+        }
+    
+        .midBarrera__container{
+            height: 4vh;
+            background-color: #fff;
+            grid-column: 2/4;
+            grid-row:6/7;
+            display: none;
+            .midBarrera{
+                height: 100%;
+                width:100%;
+                position: relative;
+    
+                
+            }
+        }
+        .fourthSection__container{
+            border-right: solid #000 3px;
+        border-left: solid #000 3px;
+            grid-row: 5/7;
+            grid-column: 1/3;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+    
+            .fourthSection{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                overflow:hidden;
+                justify-content: center;
+                align-items:flex-start;
+                background-image: none;
+                background-color:#1c1c1c;
+                background-size: cover;
+                background-position: left bottom;
+                position: relative;
+
+                video{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+    
+                .secondBotDecoration{
+                    position: absolute;
+                    bottom: -10px;
+                    width: 100%;
+                    display: block
+                }
+
+                .secondBotDecorationDos{
+                    position: absolute;
+                    top: 0;
+                    width: 100%;
+                    display: block;
+                }
+                
+                
+            }
+        }
+    
+        .fifthSection__container{
+            grid-row: 7/8;
+            grid-column: 1/3;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            display: block;
+            position: relative;
+
+            .fifthSection__container-topDeco{
+                position: absolute;
+                top: -1px;
+                object-fit: contain;
+                width: 100%;
+                z-index: 1;
+                display: none;
+            }
+    
+    
+            .fifthSection{
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                position: relative;
+    
+                
+                .fifthSectionVideo__container{
+                    height: 100%;
+                    width: 100%;
+
+                    
+        
+    
+                    video{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        .sixthSection__container{
+            grid-row: 8/9;
+            grid-column: 1/3;
+            display: block;
+            position: relative;
+
+            
+
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                display: block;
+            }
+
+        }
+
+        .sevenSection__container{
+            grid-row: 9/10;
+            grid-column: 1/3;
+            background-color: #000;
+            position: relative;
+            display: flex;
+
+            .sevenSection__topDecoration{
+                position: absolute;
+                top: 0;
+                width: 100%;
+
+            }
+
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+
+        .eightSection__container{
+            background-color: #fff;
+            grid-row:8/9;
+            grid-column: 1/3;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            
+
+            .eightSectionTopDeco{
+                position:absolute;
+                top: 0;
+                width: 100%;
+                display:block;
+                z-index: 3;
+
+            }
+
+            .eightSectionBotDeco{
+                position:absolute;
+                bottom: -10px;
+                width: 100%;
+                display:block;
+                z-index: 3;
+
+            }
+
+            .eightSection{
+                box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            -webkit-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            -moz-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+                height: 100%;
+                width: 100%;
+                background-color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .frase{
+                    position: absolute;
+                    z-index: 1;
+                    text-align: center;
+                    width: 90%;
+                    font-size: 1.3rem;
+                    font-weight: bolder;
+                    opacity: 1;
+                    transition: opacity 1s;
+
+                }
+
+                .fraseOff{
+                    opacity: 0;
+                }
+
+                .adiosEvangelion{
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    opacity: 0;
+                    transition: opacity 1s;
+                    
+                }
+
+                .adiosEvangelionOn{
+                    opacity: 1;
+                    box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            -webkit-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+            -moz-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+                }
+            }
+        }
+    }
+    
+    #footer{
+        width: 50vw;
+        height: 40vh;
+        display: none;
+        align-items: center;
+        justify-content: center;
+    
+        .footer__container{
+            background-color: #000;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content:center;
+            position: relative;
+            height: 100%;
+            width: 100%;
+    
+            .footerTopDecoration{
+                position: absolute;
+                width: 100%;
+                top: 0px;
+            }
+    
+            
+    
+        }
+    } 
+    
+}
+    
+}
