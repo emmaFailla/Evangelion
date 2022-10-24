@@ -14,9 +14,7 @@
 body{
     overflow-x: hidden;
     overflow-y: hidden;
-    .nerveSticker{
-        display: none;
-    }
+    
     .bodyPicUno,.bodyPicDos,.bodyPicTres,.bodyPicCuatro,.bodyPicCinco,.bodyPicSeis{
         position: absolute;
         height: 30vh;
@@ -48,8 +46,8 @@ body{
             justify-content: center;
 
             .nervSticker{
-                height: 30vh;
-                width: 30vw;
+                height: 15vh;
+                width: 20vw;
                 animation-name:palpito;
                 animation-duration: 1s;
                 animation-iteration-count: infinite;
@@ -847,7 +845,7 @@ body{
     
             .thirdSection__container-botDeco{
                 position: absolute;
-                bottom: -2px;
+                bottom: -4px;
                 object-fit: contain;
                 width: 100%;
             }
@@ -898,7 +896,7 @@ body{
     
                 .secondBotDecoration{
                     position: absolute;
-                    bottom: -3px;
+                    bottom: -5px;
                     width: 100%;
                 }
     
@@ -1041,10 +1039,8 @@ body{
      display: flex;
      flex-flow: column;
      align-items: center;
-     justify-content: center;
      width: 100vw;
      position: relative;
-     overflow-y: scroll;
      z-index: 1;
 
      
@@ -1058,7 +1054,7 @@ body{
         box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-        display: block;
+        display: none;
      }
 
      .bodyPicUno,.bodyPicTres,.bodyPicCinco{
@@ -1088,6 +1084,43 @@ body{
         top: 350vh;
      }
 
+
+     .pantallaCarga{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        background-color: #f7f6f4;
+        z-index: 10;
+        transition: opacity 1s;
+
+        .pantallaCargaUno{
+            grid-row: 1/2;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .nervSticker{
+                height: 40vh;
+                width: 20vw;
+                animation-name:palpito;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate;
+                animation-timing-function: ease-out;
+            }
+        }
+        
+        
+        
+        
+        
+        
+     }
      
      
 
@@ -1096,17 +1129,21 @@ body{
     #header{
         
         height:94vh;
-        width: 50%;
+        width: 60%;
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 20vh 70vh 4vh;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         
 
         
         
         //El nav de la pagina
         .topHeader__container{
-    
+            border-right: solid #000 3px;
+        border-left: solid #000 3px;
             background:#fffefa;
             display: flex ;
             align-items: center;
@@ -1119,17 +1156,18 @@ body{
             .rightWing{
                 position: absolute;
                 right: -18.4vh;
-                top: .2vh;
+                top: .8vh;
                 display: block;
                 height: 20vh;
+                display: none;
                 
             }
 
             .leftWing{
                 position: absolute;
                 right: -17.6vh;
-                top: .2vh;
-                display: block;
+                top: .8vh;
+                display: none;
                 height: 20vh;
 
                 
@@ -1279,11 +1317,13 @@ body{
     }
     
     #main{
-        width: 50%;
+        width: 60%;
         display: grid;
         grid-template-columns: 50% 50% ;
-        grid-template-rows: 80vh 4vh 60vh 4vh 4vh 80vh 80vh 60vh 50vh ;
-        
+        grid-template-rows: 60vh 4vh 60vh 4vh 4vh 60vh 80vh 60vh 50vh ;
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
         .firstSection__container{
             border-right: solid #000 2px;
         border-left: solid #000 2px;

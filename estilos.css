@@ -17,10 +17,6 @@ body {
   overflow-y: hidden;
 }
 
-body .nerveSticker {
-  display: none;
-}
-
 body .bodyPicUno, body .bodyPicDos, body .bodyPicTres, body .bodyPicCuatro, body .bodyPicCinco, body .bodyPicSeis {
   position: absolute;
   height: 30vh;
@@ -70,8 +66,8 @@ body .pantallaCarga .pantallaCargaUno {
 }
 
 body .pantallaCarga .pantallaCargaUno .nervSticker {
-  height: 30vh;
-  width: 30vw;
+  height: 15vh;
+  width: 20vw;
   -webkit-animation-name: palpito;
           animation-name: palpito;
   -webkit-animation-duration: 1s;
@@ -1179,7 +1175,7 @@ body #main .thirdSection__container .thirdSection .thirdSection__container-topDe
 
 body #main .thirdSection__container .thirdSection .thirdSection__container-botDeco {
   position: absolute;
-  bottom: -2px;
+  bottom: -4px;
   -o-object-fit: contain;
      object-fit: contain;
   width: 100%;
@@ -1242,7 +1238,7 @@ body #main .fourthSection__container .fourthSection video {
 
 body #main .fourthSection__container .fourthSection .secondBotDecoration {
   position: absolute;
-  bottom: -3px;
+  bottom: -5px;
   width: 100%;
 }
 
@@ -1368,12 +1364,8 @@ body #footer .footer__container .footerTopDecoration {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
     width: 100vw;
     position: relative;
-    overflow-y: scroll;
     z-index: 1;
   }
   body .bodyPicUno, body .bodyPicDos, body .bodyPicTres, body .bodyPicCuatro, body .bodyPicCinco, body .bodyPicSeis {
@@ -1386,7 +1378,7 @@ body #footer .footer__container .footerTopDecoration {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
     -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
-    display: block;
+    display: none;
   }
   body .bodyPicUno, body .bodyPicTres, body .bodyPicCinco {
     right: 2vw;
@@ -1412,17 +1404,70 @@ body #footer .footer__container .footerTopDecoration {
   body .bodyPicSeis {
     top: 350vh;
   }
+  body .pantallaCarga {
+    height: 100vh;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: absolute;
+    background-color: #f7f6f4;
+    z-index: 10;
+    -webkit-transition: opacity 1s;
+    transition: opacity 1s;
+  }
+  body .pantallaCarga .pantallaCargaUno {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+    height: 100%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  body .pantallaCarga .pantallaCargaUno .nervSticker {
+    height: 40vh;
+    width: 20vw;
+    -webkit-animation-name: palpito;
+            animation-name: palpito;
+    -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+            animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
   body #header {
     height: 94vh;
-    width: 50%;
+    width: 60%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
     -ms-grid-rows: 20vh 70vh 4vh;
         grid-template-rows: 20vh 70vh 4vh;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   }
   body #header .topHeader__container {
+    border-right: solid #000 3px;
+    border-left: solid #000 3px;
     background: #fffefa;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -1445,15 +1490,16 @@ body #footer .footer__container .footerTopDecoration {
   body #header .topHeader__container .rightWing {
     position: absolute;
     right: -18.4vh;
-    top: .2vh;
+    top: .8vh;
     display: block;
     height: 20vh;
+    display: none;
   }
   body #header .topHeader__container .leftWing {
     position: absolute;
     right: -17.6vh;
-    top: .2vh;
-    display: block;
+    top: .8vh;
+    display: none;
     height: 20vh;
   }
   body #header .topHeader__container .logo__container {
@@ -1648,13 +1694,16 @@ body #footer .footer__container .footerTopDecoration {
     }
   }
   body #main {
-    width: 50%;
+    width: 60%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 50% 50%;
         grid-template-columns: 50% 50%;
-    -ms-grid-rows: 80vh 4vh 60vh 4vh 4vh 80vh 80vh 60vh 50vh;
-        grid-template-rows: 80vh 4vh 60vh 4vh 4vh 80vh 80vh 60vh 50vh;
+    -ms-grid-rows: 60vh 4vh 60vh 4vh 4vh 60vh 80vh 60vh 50vh;
+        grid-template-rows: 60vh 4vh 60vh 4vh 4vh 60vh 80vh 60vh 50vh;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
   }
   body #main .firstSection__container {
     border-right: solid #000 2px;

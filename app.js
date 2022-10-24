@@ -89,27 +89,27 @@ frase.addEventListener('mouseover',()=>{
 gsap.registerPlugin(ScrollTrigger)
 gsap.to(".bodyPicUno",{
 scrollTrigger:".bodyPicUno", 
-opacity : 0,duration : 5})
+opacity : 0,duration : 2})
 
 gsap.to(".bodyPicDos",{
  scrollTrigger:".bodyPicDos", 
-opacity : 0,duration : 5})
+opacity : 0,duration : 2})
 
 gsap.to(".bodyPicTres",{
 scrollTrigger:".bodyPicTres", 
-opacity : 0,duration : 5})
+opacity : 0,duration : 2})
 
 gsap.to(".bodyPicCuatro",{
  scrollTrigger:".bodyPicCuatro", 
- opacity : 0,duration : 5})
+ opacity : 0,duration : 2})
 
 gsap.to(".bodyPicCinco",{
  scrollTrigger:".bodyPicCinco", 
- opacity : 0,duration : 5})
+ opacity : 0,duration : 2})
 
 gsap.to(".bodyPicSeis",{
  scrollTrigger:".bodyPicSeis", 
- opacity : 0,duration :5})
+ opacity : 0,duration :2})
                     
 
 
