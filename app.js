@@ -1,3 +1,17 @@
+//Pantalla de Carga
+const pantallaCarga = document.querySelector('.pantallaCarga') 
+window.onload = function () {
+    pantallaCarga.classList.add('pantallaCargaOff')
+    setTimeout(()=>{pantallaCarga.classList.add('pantallaCargaNone')},2000)
+    if(pantallaCarga.classList.contains('pantallaCargaNone')){
+        return console.log('Los elementos cargaron correctamente.')
+    }
+}
+//Pantalla de Carga 
+
+
+
+
 const leftButton = document.querySelector('.leftButton')
 const rightButton = document.querySelector('.rightButton')
 const personajes = document.querySelectorAll('.personajes')

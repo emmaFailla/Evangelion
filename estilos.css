@@ -32,6 +32,72 @@ body .bodyPicUno, body .bodyPicDos, body .bodyPicTres, body .bodyPicCuatro, body
   display: none;
 }
 
+body .pantallaCarga {
+  height: 100%;
+  width: 100%;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  position: absolute;
+  background-color: #f7f6f4;
+  z-index: 10;
+  -webkit-transition: opacity 1s;
+  transition: opacity 1s;
+}
+
+body .pantallaCarga .pantallaCargaUno {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .pantallaCarga .pantallaCargaUno .nervSticker {
+  height: 30vh;
+  width: 15vw;
+  -webkit-animation-name: palpito;
+          animation-name: palpito;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+  -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+}
+
+body .pantallaCarga .pantallaCargaDos {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 1;
+  grid-row: 2/3;
+}
+
+body .pantallaCarga .pantallaCargaTres {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 3;
+  grid-row: 3/6;
+}
+
+body .pantallaCargaOff {
+  opacity: 0;
+}
+
+body .pantallaCargaNone {
+  display: none;
+}
+
 #header {
   height: 50vh;
   width: 100vw;
@@ -1811,7 +1877,7 @@ body .bodyPicUno, body .bodyPicDos, body .bodyPicTres, body .bodyPicCuatro, body
     -ms-grid-column: 2;
     -ms-grid-column-span: 1;
     grid-column: 2/3;
-    background-color: red;
+    background-color: #1c1c1c;
     height: 100%;
     width: 100%;
     display: block;
