@@ -1,11 +1,18 @@
 //Pantalla de Carga
 const pantallaCarga = document.querySelector('.pantallaCarga') 
-window.onload = function () {
+ function cargando () {
+    body.classList.add('scroll')
     pantallaCarga.classList.add('pantallaCargaOff')
     setTimeout(()=>{pantallaCarga.classList.add('pantallaCargaNone')},2000)
     if(pantallaCarga.classList.contains('pantallaCargaNone')){
         return console.log('Los elementos cargaron correctamente.')
     }
+}
+
+window.onload = function(){
+    setTimeout(()=>{
+        return cargando()
+    },10000)
 }
 //Pantalla de Carga 
 
@@ -20,7 +27,7 @@ const videoContainer = document.querySelector('.secondSectionDesktopVideo__conta
 const videoContainerDos = document.querySelector('.fourthSection__video')
 const frase = document.querySelector('.frase')
 const adiosEvangelion = document.querySelector('.adiosEvangelion')
-
+const body = document.querySelector('.body')
 
 let personajePosition = 0
 function previous () {

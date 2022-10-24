@@ -13,6 +13,7 @@
 
 body{
     overflow-x: hidden;
+    overflow-y: hidden;
     .nerveSticker{
         display: none;
     }
@@ -28,11 +29,11 @@ body{
      }
 
      .pantallaCarga{
-        height: 100%;
+        height: 100vh;
         width: 100%;
-        display: grid;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-        grid-template-columns: 1fr;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         position: absolute;
         background-color: #f7f6f4;
         z-index: 10;
@@ -40,26 +41,23 @@ body{
 
         .pantallaCargaUno{
             grid-row: 1/2;
+            height: 100%;
+            width: 100%;
             display: flex;
             align-items: center;
             justify-content: center;
 
             .nervSticker{
                 height: 30vh;
-                width: 15vw;
+                width: 30vw;
                 animation-name:palpito;
-                animation-duration: 2s;
+                animation-duration: 1s;
                 animation-iteration-count: infinite;
                 animation-direction: alternate;
                 animation-timing-function: ease-out;
             }
         }
-        .pantallaCargaDos{
-            grid-row: 2/3;
-        }
-        .pantallaCargaTres{
-            grid-row: 3/6;
-        }
+        
         
         
         
@@ -73,923 +71,933 @@ body{
      .pantallaCargaNone{
         display: none;
      }
-}
-#header{
-    height: 50vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows:10vh  37vh 3.1vh;
-    //El nav de la pagina
-    .topHeader__container{
-        background:#f7f6f4 ;
+
+
+
+
+
+     #header{
+        height: 50vh;
+        width: 100vw;
         display: grid;
-        grid-template-rows:1fr ;
-        grid-template-columns: 4fr 6fr;
-
-        .rightWing{
-            position: absolute;
-            right: -18.4vh;
-            top: .1vh;
-            display: none;
-            
-        }
-
-        .leftWing{
-            position: absolute;
-            left: -18.4vh;
-            top: .1vh;
-            display: none;
-            
-        }
-       
-
-
-        //Logo
-        .logo__container{
-            height: 100%;
-            width: 100%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .logo{
-                height: 60%;
-                width: 80%;
-                object-fit: contain;
-            }
-        }
-
-        //Menu
-        .menu__container{
-
-            height: 100%;
-            width: 100%;
-            grid-row: 1/2;
-            grid-column:2/3;
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-
-            .bars{
-                height: 1.6rem;
-                width: 1.6rem;
-                transform: translateX(-1.5rem);
-            }
-        }
-    }
-    //TopBar
-    .headerTopBar{
-        background-color: #1c1c1c;
-    }
-    //ShinjiEyesContainer
-    .headerArt__container{
-        
-        background-color: rgb(53, 72, 251);
-        animation-name:colorChanging;
-        animation-duration: 15s;
-        animation-iteration-count: infinite;
-        animation-direction: normal;
-        animation-timing-function: linear;
-        overflow: hidden;
-        .headerArt{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        @keyframes colorChanging{
-            0%{
-                background-color: rgb(53, 218, 251);
-            }
-            20%{
-                background-color: rgb(53, 72, 251);
-            }
-            40%{
-                background-color: rgb(152, 53, 251);
-            }
-            60%{
-                background-color: rgb(251, 53, 53);
-            }
-            64%{
-                background-color: rgb(251, 145, 53);
-            }
-            80%{
-                background-color: rgb(251, 244, 53);
-            }
-            96%{
-                background-color: rgb(76, 250, 97);
-            }
-            100%{
-                background-color: rgb(53, 218, 251);
-            }
-
-        }
-    }
-    //BottomBar
-    .headerBotAnimatedBar{
-        background-color: #1c1c1c;
-        display: flex;
-        height: 100%;
-        width: 100%;
-        overflow: hidden;
-
-        .headerBotNames__container{
-            height: 100%;
-            width: 200vw;
-            align-items: center;
-            position: relative;
-            display: flex;
-            animation-name: infiniteSlide;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
-
-
-            span{
-                margin-right:1rem ;
-                color: #f7f6f4;
-                font-size: .8rem;
-                display: flex;
-                text-align: center;
-                white-space: nowrap;
-            }
-
-            @keyframes infiniteSlide{
-                from{
-                    right: 200%;
-                }
-
-                to{
-                    right: -100%;
-                }
-            }
-        }
-    }
-
-}
-
-#main{
-
-    .firstSection__container{
-        height: 50vh;
-        width:100%;
-        position: relative;
-        background-size:cover;
-        background-position: center center;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content:center;
-
-
-        
-
-        @keyframes palpito{
-            from{
-                opacity : .1
-            }
-
-            to{
-                opacity: 1;
-            }
-        }
-
-        .sinopsis__container{
-            height: 100%;
-            width:100%;
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            flex-flow:column;
-            background-color: #f7f6f4;
-            opacity: 1;
-            box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
-            -webkit-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
-            -moz-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
-            
-            .info__container{
-            width: 90%;
-            display: flex;
-            align-items:center;
-            justify-content:center;
-            font-weight: bolder;
-           
-           
-
-            .info__container-info{
-                text-align: center;
-                letter-spacing: 1px;
-                font-size:1rem;
-                z-index: 1;
-             
-            }
-
-            
-        }
-
-            
-        }   
-        .sinopsis__container-desktop{
-            display: none;
-        }
-
+        grid-template-columns: 1fr;
+        grid-template-rows:10vh  37vh 3.1vh;
+        //El nav de la pagina
+        .topHeader__container{
+            background:#f7f6f4 ;
+            display: grid;
+            grid-template-rows:1fr ;
+            grid-template-columns: 4fr 6fr;
     
-        
-    }
-
-    .firstBarrera{
-        height: 3vh;
-        background-color: #1c1c1c;
-        overflow: hidden;
-        
-
-        .firstBarreraNames{
-            height: 100%;
-            width: 200vw;
-            align-items: center;
-            position: relative;
-            display: flex;
-            animation-name: infiniteSlide;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
-
-            span{
-                margin-right:1rem ;
-                color: #f7f6f4;
-                font-size: .8rem;
-                display: flex;
-                text-align: center;
-                white-space: nowrap;
+            .rightWing{
+                position: absolute;
+                right: -18.4vh;
+                top: .1vh;
+                display: none;
+                
             }
-        }
-    }
-    .secondBarrera{
-        grid-column: 1/5;
-        grid-row: 5/6;
-        height: 100%;
-        background-color: #1c1c1c;
-        overflow: hidden;
-        display: none;
-        
-
-        .secondBarreraNames{
-            height: 100%;
-            width: 200vw;
-            align-items: center;
-            position: relative;
-            display: flex;
-            animation-name: infiniteSlide;
-            animation-duration: 10s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-            animation-direction: normal;
-
-            span{
-                margin-right:1rem ;
-                color: #f7f6f4;
-                font-size: .8rem;
-                display: flex;
-                text-align: center;
-                white-space: nowrap;
+    
+            .leftWing{
+                position: absolute;
+                left: -18.4vh;
+                top: .1vh;
+                display: none;
+                
             }
-        }
-    }
-    .secondSectionDesktopVideo__container{
-        grid-row:3/5 ;
-        grid-column:3/6;
-        background-color: red;
-        height: 100%;
-        width: 100%;
-        display: none;
-        
-        .rightTriangle{
-            display: none;
-        }
-        
-
-        video{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            
-        }
-    }
-    .secondSection__container{
-        height: 50vh;
-        display:flex;
-
-        .leftTriangle{
-            display: none;
-        }
-
-        .slider__container{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 100%;
-            width: 100%;
-
-            .slider{
+           
+    
+    
+            //Logo
+            .logo__container{
                 height: 100%;
                 width: 100%;
                 display: flex;
-                overflow: hidden;
-
-        .personajes{
-            transition: 1s;
+                align-items: center;
+                justify-content: center;
+    
+                .logo{
+                    height: 60%;
+                    width: 80%;
+                    object-fit: contain;
+                }
+            }
+    
+            //Menu
+            .menu__container{
+    
+                height: 100%;
+                width: 100%;
+                grid-row: 1/2;
+                grid-column:2/3;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+    
+                .bars{
+                    height: 1.6rem;
+                    width: 1.6rem;
+                    transform: translateX(-1.5rem);
+                }
+            }
         }
+        //TopBar
+        .headerTopBar{
+            background-color: #1c1c1c;
+        }
+        //ShinjiEyesContainer
+        .headerArt__container{
+            
+            background-color: rgb(53, 72, 251);
+            animation-name:colorChanging;
+            animation-duration: 15s;
+            animation-iteration-count: infinite;
+            animation-direction: normal;
+            animation-timing-function: linear;
+            overflow: hidden;
+            .headerArt{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+    
+            @keyframes colorChanging{
+                0%{
+                    background-color: rgb(53, 218, 251);
+                }
+                20%{
+                    background-color: rgb(53, 72, 251);
+                }
+                40%{
+                    background-color: rgb(152, 53, 251);
+                }
+                60%{
+                    background-color: rgb(251, 53, 53);
+                }
+                64%{
+                    background-color: rgb(251, 145, 53);
+                }
+                80%{
+                    background-color: rgb(251, 244, 53);
+                }
+                96%{
+                    background-color: rgb(76, 250, 97);
+                }
+                100%{
+                    background-color: rgb(53, 218, 251);
+                }
+    
+            }
+        }
+        //BottomBar
+        .headerBotAnimatedBar{
+            background-color: #1c1c1c;
+            display: flex;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+    
+            .headerBotNames__container{
+                height: 100%;
+                width: 200vw;
+                align-items: center;
+                position: relative;
+                display: flex;
+                animation-name: infiniteSlide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+    
+    
+                span{
+                    margin-right:1rem ;
+                    color: #f7f6f4;
+                    font-size: .8rem;
+                    display: flex;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+    
+                @keyframes infiniteSlide{
+                    from{
+                        right: 200%;
+                    }
+    
+                    to{
+                        right: -100%;
+                    }
+                }
+            }
+        }
+    
+    }
+    
+    #main{
+    
+        .firstSection__container{
+            height: 50vh;
+            width:100%;
+            position: relative;
+            background-size:cover;
+            background-position: center center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content:center;
+    
+    
+            
+    
+            @keyframes palpito{
+                from{
+                    opacity : .1
+                }
+    
+                to{
+                    opacity: 1;
+                }
+            }
+    
+            .sinopsis__container{
+                height: 100%;
+                width:100%;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                flex-flow:column;
+                background-color: #f7f6f4;
+                opacity: 1;
+                box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+                -webkit-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+                -moz-box-shadow: -1px 0px 33px -4px rgba(0,0,0,0.75) inset;
+                
+                .info__container{
+                width: 90%;
+                display: flex;
+                align-items:center;
+                justify-content:center;
+                font-weight: bolder;
+               
+               
+    
+                .info__container-info{
+                    text-align: center;
+                    letter-spacing: 1px;
+                    font-size:1rem;
+                    z-index: 1;
+                 
+                }
+    
+                
+            }
+    
+                
+            }   
+            .sinopsis__container-desktop{
+                display: none;
+            }
+    
         
-                
-        //ASUKA
-        .asukaSection__container{
-                    background-color: #e94148;
-                    height: 50vh;
-                    min-width: 100%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows:25vh 25vh;
-
-                    .asuka__container{
-                        grid-row: 1/4;
-                        grid-column:1/2;
-                        display: flex;
-                        flex-flow: column;
-                        align-items: center;
-                        justify-content: space-between;
-                        
-
-                        img{
-                            height: 100%;
-                            width: 100%;
-                            object-fit: cover;
-                            
-                        }
-                    }
-                    .asukaInfo__container{
-                        display: flex;
-                        flex-flow:column;
-                        justify-content:center;
-                        grid-row: 1/2;
-                        grid-column:2/3;
-                        background-color: #f7f6f4;
-                        margin: 2rem 1rem;
-                        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                        border-radius: 3px ;
-
-                        //Nombre Asuka
-                        h3{
-                            color: #000;
-                            text-align: center;
-                            font-size: 1rem;
-                        }
-                        //Info asuka
-                        span{
-                            color: #000;
-                            text-align: center;
-                            font-size: .8rem;
-                        }
-                        
-                    }
-                    //Asuka Video
-                    .asukaVideo__container{
-                        grid-row: 2/3;
-                        grid-column:2/3;
-                        background-color: red;
-                        border: solid #000 2px;
-
-                        video{
-                            object-fit: cover;
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
-                }
-        //REI 
-        .reiSection__container{
-                    background-color: #b5d7fb ;
-                    height: 100%;
-                    min-width: 100%;
-                    display: grid;
-                    grid-template-columns: 1fr 1fr;
-                    grid-template-rows:25vh 25vh;
-                    overflow: hidden;
-
-                    .rei__container{
-                        grid-row: 1/4;
-                        grid-column:2/3;
-                        display: flex;
-                        flex-flow: column;
-                        align-items: center;
-                        justify-content: space-between;
-
-                        img{
-                            height: 100%;
-                            width: 100%;
-                            object-fit: cover;
-                            
-                        }
-                    }
-
-                    .reiInfo__container{
-                        display: flex;
-                        flex-flow:column;
-                        justify-content:center;
-                        grid-row: 1/2;
-                        grid-column:1/2;
-                        background-color: #f7f6f4;
-                        margin: 2rem 1rem;
-                        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                        -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                        -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                        border-radius: 3px ;
-
-                        //Nombre Rei
-                        h3{
-                            color: #000;
-                            text-align: center;
-                            font-size: 1rem;
-                        }
-                        //Info Rei
-                        span{
-                            color: #000;
-                            text-align: center;
-                            font-size: .8rem;
-                        }
-                        
-                    }
-                    .reiVideo__container{
-                        grid-row: 2/3;
-                        grid-column:1/2;
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-                        border-top: #1c1c1c solid 2px;
-                        border-bottom: #1c1c1c solid 2px;
-                        video{
-                            object-fit: cover;
-                            height: 100%;
-                            width: 100%;
-                        }
-                    }
-                    
-                }
-        //SHINJI
-        .shinjiSection__container{
-            background-color: #428ad6;
-            height: 50vh;
-            min-width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows:25vh 25vh;
-            overflow: hidden;
-
-            .shinji__container{
-                grid-row: 1/4;
-                grid-column:1/2;
-                display: flex;
-                flex-flow: column;
-                align-items: center;
-                justify-content: space-between;
-
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    
-                }
-            }
-
-            .shinjiInfo__container{
-                display: flex;
-                flex-flow:column;
-                justify-content:center;
-                grid-row: 2/3;
-                grid-column:2/3;
-                background-color: #f7f6f4;
-                margin: 2rem 1rem;
-                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                border-radius: 3px ;
-
-                //Nombre shinji
-                h3{
-                    color: #000;
-                    text-align: center;
-                    font-size: 1rem;
-                }
-                //Info shinji
-                span{
-                    color: #000;
-                    text-align: center;
-                    font-size: .8rem;
-                }
-                
-            }
-            .shinjiVideo__container{
-                grid-row: 1/2;
-                grid-column:2/3;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-bottom: solid #1c1c1c 2px ;
-                border-left:solid #1c1c1c 2px  ;
-                video{
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-        }      
-        //MARI
-        .mariSection__container{
-            background-color:rgb(255, 170, 184);
-            height: 50vh;
-            min-width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows:25vh 25vh;
-            overflow: hidden;
-
-            .mari__container{
-                grid-row: 1/4;
-                grid-column:2/3;
-                display: flex;
-                flex-flow: column;
-                align-items: center;
-                justify-content: space-between;
-
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    
-                }
-            }
-
-            .mariInfo__container{
-                display: flex;
-                flex-flow:column;
-                justify-content:center;
-                grid-row: 1/2;
-                grid-column:1/2;
-                background-color: #f7f6f4;
-                margin: 2rem 1rem;
-                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                border-radius: 3px;
-
-                //Nombre mari
-                h3{
-                    color: #000;
-                    text-align: center;
-                    font-size: 1rem;
-                }
-                //Info mari
-                span{
-                    color: #000;
-                    text-align: center;
-                    font-size: .8rem;
-                }
-                
-            }
-            .mariVideo__container{
-                grid-row: 2/3;
-                grid-column:1/2;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-top: solid #1c1c1c 2px ;
-                border-right:solid #1c1c1c 2px  ;
-                video{
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-        }
-        //KAWORU
-        .kaworuSection__container{
-            background-color:#f7f6f4;
-            height: 50vh;
-            min-width: 100%;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows:25vh 25vh;
-            overflow: hidden;
-
-            .kaworu__container{
-                grid-row: 1/4;
-                grid-column:1/2;
-                display: flex;
-                flex-flow: column;
-                align-items: center;
-                justify-content: space-between;
-
-                img{
-                    height: 100%;
-                    width: 100%;
-                    object-fit: cover;
-                    
-                }
-            }
-
-            .kaworuInfo__container{
-                display: flex;
-                flex-flow:column;
-                justify-content:center;
-                grid-row: 1/2;
-                grid-column:2/3;
-                background-color: #f7f6f4;
-                margin: 2rem 1rem;
-                box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-                border-radius: 3px;
-
-                //Nombre kaworu
-                h3{
-                    color: #000;
-                    text-align: center;
-                    font-size: 1rem;
-                }
-                //Info kaworu
-                span{
-                    color: #000;
-                    text-align: center;
-                    font-size: .8rem;
-                }
-                
-            }
-            .kaworuVideo__container{
-                grid-row: 2/3;
-                grid-column:2/3;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-top: solid #1c1c1c 2px ;
-                border-left:solid #1c1c1c 2px  ;
-                video{
-                    object-fit: cover;
-                    height: 100%;
-                    width: 100%;
-                }
-            }
-
             
         }
+    
+        .firstBarrera{
+            height: 3vh;
+            background-color: #1c1c1c;
+            overflow: hidden;
+            
+    
+            .firstBarreraNames{
+                height: 100%;
+                width: 200vw;
+                align-items: center;
+                position: relative;
+                display: flex;
+                animation-name: infiniteSlide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+    
+                span{
+                    margin-right:1rem ;
+                    color: #f7f6f4;
+                    font-size: .8rem;
+                    display: flex;
+                    text-align: center;
+                    white-space: nowrap;
+                }
             }
         }
-        
-        
-        
-    }
-    .characterButtons{
-        height: 5vh;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        border-top:solid #1c1c1c 2px;
-
-        .names__container{
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-
-            .nombres{
+        .secondBarrera{
+            grid-column: 1/5;
+            grid-row: 5/6;
+            height: 100%;
+            background-color: #1c1c1c;
+            overflow: hidden;
+            display: none;
+            
+    
+            .secondBarreraNames{
+                height: 100%;
+                width: 200vw;
+                align-items: center;
+                position: relative;
+                display: flex;
+                animation-name: infiniteSlide;
+                animation-duration: 10s;
+                animation-timing-function: linear;
+                animation-iteration-count: infinite;
+                animation-direction: normal;
+    
+                span{
+                    margin-right:1rem ;
+                    color: #f7f6f4;
+                    font-size: .8rem;
+                    display: flex;
+                    text-align: center;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .secondSectionDesktopVideo__container{
+            grid-row:3/5 ;
+            grid-column:3/6;
+            background-color: red;
+            height: 100%;
+            width: 100%;
+            display: none;
+            
+            .rightTriangle{
+                display: none;
+            }
+            
+    
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                
+            }
+        }
+        .secondSection__container{
+            height: 50vh;
+            display:flex;
+    
+            .leftTriangle{
+                display: none;
+            }
+    
+            .slider__container{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 100%;
+                width: 100%;
+    
+                .slider{
+                    height: 100%;
+                    width: 100%;
+                    display: flex;
+                    overflow: hidden;
+    
+            .personajes{
                 transition: 1s;
             }
-
-            .asukaName{
-                color: #000;
-                position: relative;
-                top:4px;
+            
+                    
+            //ASUKA
+            .asukaSection__container{
+                        background-color: #e94148;
+                        height: 50vh;
+                        min-width: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows:25vh 25vh;
+    
+                        .asuka__container{
+                            grid-row: 1/4;
+                            grid-column:1/2;
+                            display: flex;
+                            flex-flow: column;
+                            align-items: center;
+                            justify-content: space-between;
+                            
+    
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                                
+                            }
+                        }
+                        .asukaInfo__container{
+                            display: flex;
+                            flex-flow:column;
+                            justify-content:center;
+                            grid-row: 1/2;
+                            grid-column:2/3;
+                            background-color: #f7f6f4;
+                            margin: 2rem 1rem;
+                            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            border-radius: 3px ;
+    
+                            //Nombre Asuka
+                            h3{
+                                color: #000;
+                                text-align: center;
+                                font-size: 1rem;
+                            }
+                            //Info asuka
+                            span{
+                                color: #000;
+                                text-align: center;
+                                font-size: .8rem;
+                            }
+                            
+                        }
+                        //Asuka Video
+                        .asukaVideo__container{
+                            grid-row: 2/3;
+                            grid-column:2/3;
+                            background-color: red;
+                            border: solid #000 2px;
+    
+                            video{
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                    }
+            //REI 
+            .reiSection__container{
+                        background-color: #b5d7fb ;
+                        height: 100%;
+                        min-width: 100%;
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-template-rows:25vh 25vh;
+                        overflow: hidden;
+    
+                        .rei__container{
+                            grid-row: 1/4;
+                            grid-column:2/3;
+                            display: flex;
+                            flex-flow: column;
+                            align-items: center;
+                            justify-content: space-between;
+    
+                            img{
+                                height: 100%;
+                                width: 100%;
+                                object-fit: cover;
+                                
+                            }
+                        }
+    
+                        .reiInfo__container{
+                            display: flex;
+                            flex-flow:column;
+                            justify-content:center;
+                            grid-row: 1/2;
+                            grid-column:1/2;
+                            background-color: #f7f6f4;
+                            margin: 2rem 1rem;
+                            box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                            border-radius: 3px ;
+    
+                            //Nombre Rei
+                            h3{
+                                color: #000;
+                                text-align: center;
+                                font-size: 1rem;
+                            }
+                            //Info Rei
+                            span{
+                                color: #000;
+                                text-align: center;
+                                font-size: .8rem;
+                            }
+                            
+                        }
+                        .reiVideo__container{
+                            grid-row: 2/3;
+                            grid-column:1/2;
+                            display: flex;
+                            align-items: center;
+                            justify-content: center;
+                            border-top: #1c1c1c solid 2px;
+                            border-right: #1c1c1c solid 2px;
+                            video{
+                                object-fit: cover;
+                                height: 100%;
+                                width: 100%;
+                            }
+                        }
+                        
+                    }
+            //SHINJI
+            .shinjiSection__container{
+                background-color: #428ad6;
+                height: 50vh;
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:25vh 25vh;
+                overflow: hidden;
+    
+                .shinji__container{
+                    grid-row: 1/4;
+                    grid-column:1/2;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        
+                    }
+                }
+    
+                .shinjiInfo__container{
+                    display: flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    grid-row: 2/3;
+                    grid-column:2/3;
+                    background-color: #f7f6f4;
+                    margin: 2rem 1rem;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    border-radius: 3px ;
+    
+                    //Nombre shinji
+                    h3{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    //Info shinji
+                    span{
+                        color: #000;
+                        text-align: center;
+                        font-size: .8rem;
+                    }
+                    
+                }
+                .shinjiVideo__container{
+                    grid-row: 1/2;
+                    grid-column:2/3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-bottom: solid #1c1c1c 2px ;
+                    border-left:solid #1c1c1c 2px  ;
+                    video{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }      
+            //MARI
+            .mariSection__container{
+                background-color:rgb(255, 170, 184);
+                height: 50vh;
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:25vh 25vh;
+                overflow: hidden;
+    
+                .mari__container{
+                    grid-row: 1/4;
+                    grid-column:2/3;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        
+                    }
+                }
+    
+                .mariInfo__container{
+                    display: flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    grid-row: 1/2;
+                    grid-column:1/2;
+                    background-color: #f7f6f4;
+                    margin: 2rem 1rem;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    border-radius: 3px;
+    
+                    //Nombre mari
+                    h3{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    //Info mari
+                    span{
+                        color: #000;
+                        text-align: center;
+                        font-size: .8rem;
+                    }
+                    
+                }
+                .mariVideo__container{
+                    grid-row: 2/3;
+                    grid-column:1/2;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: solid #1c1c1c 2px ;
+                    border-right:solid #1c1c1c 2px  ;
+                    video{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+            }
+            //KAWORU
+            .kaworuSection__container{
+                background-color:#f7f6f4;
+                height: 50vh;
+                min-width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows:25vh 25vh;
+                overflow: hidden;
+    
+                .kaworu__container{
+                    grid-row: 1/4;
+                    grid-column:1/2;
+                    display: flex;
+                    flex-flow: column;
+                    align-items: center;
+                    justify-content: space-between;
+    
+                    img{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        
+                    }
+                }
+    
+                .kaworuInfo__container{
+                    display: flex;
+                    flex-flow:column;
+                    justify-content:center;
+                    grid-row: 1/2;
+                    grid-column:2/3;
+                    background-color: #f7f6f4;
+                    margin: 2rem 1rem;
+                    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+                    border-radius: 3px;
+    
+                    //Nombre kaworu
+                    h3{
+                        color: #000;
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                    //Info kaworu
+                    span{
+                        color: #000;
+                        text-align: center;
+                        font-size: .8rem;
+                    }
+                    
+                }
+                .kaworuVideo__container{
+                    grid-row: 2/3;
+                    grid-column:2/3;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-top: solid #1c1c1c 2px ;
+                    border-left:solid #1c1c1c 2px  ;
+                    video{
+                        object-fit: cover;
+                        height: 100%;
+                        width: 100%;
+                    }
+                }
+    
                 
             }
-            .reiName{
-                color: #000;
-                position: relative;
-                top:4px;
+                }
             }
-            .shinjiName{
-                color: #000;
-                position: relative;
-                top:4px;
-            }
-            .mariName{
-                color: #000;
-                position: relative;
-                top:4px;
-            }
-            .kaworuName{
-                color: #000;
-                position: relative;
-                top:4px;
-                
-            }
-        }
-
-        .leftButton{
-            font-size: 1.5rem;
-            margin-left:1rem ;
-            color: #000;
-            position: relative;
-            top: 4px;
-            cursor: pointer;
+            
+            
             
         }
-
-        .rightButton{
-            font-size: 1.5rem;
-            margin-right:1rem;
-            color: #000;
-            position: relative;
-            top: 4px;
-            cursor:pointer;
-         
-        }
-    }
-
-    .thirdSection__container{
-        height: 50vh;
-        background-color: #f7f6f4;
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        .thirdSection{
-            height: 100%;
-            width: 100%;
-            position: relative;
-
-            .thirdSection__container-topDeco-black{
-                display: none;
-            }
-
-            .thirdSection__container-topDeco{
-            position: absolute;
-            top: -1px;
-            object-fit: contain;
-            width: 100%;
-            
-        }
-
-        .thirdSection__container-botDeco{
-            position: absolute;
-            bottom: -2px;
-            object-fit: contain;
-            width: 100%;
-        }
-
-        video{
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-        }
-
-        }
-        
-    }
-
-    .midBarrera__container{
-        height: 5vh;
-        background-color: #fff;
-        .midBarrera{
-            height: 100%;
-            width:100%;
-            position: relative;
-
-            
-        }
-    }
-    .fourthSection__container{
-        height: 50vh;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .fourthSection{
-            height: 100%;
-            width: 100%;
+        .characterButtons{
+            height: 5vh;
+            background-color: #fff;
             display: flex;
-            overflow:hidden;
-            justify-content: center;
-            align-items:flex-start;
-            background-image: url(imgs/EvanegelionPoster.png);
-            background-size: cover;
-            background-position: center center;
+            align-items: center;
+            justify-content: space-between;
             position: relative;
-
-            video{
-                display: none;
-            }
-
-            .secondBotDecoration{
+            border-top:solid #1c1c1c 2px;
+    
+            .names__container{
                 position: absolute;
-                bottom: -3px;
-                width: 100%;
+                left: 50%;
+                transform: translateX(-50%);
+    
+                .nombres{
+                    transition: 1s;
+                }
+    
+                .asukaName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                    
+                }
+                .reiName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                }
+                .shinjiName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                }
+                .mariName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                }
+                .kaworuName{
+                    color: #000;
+                    position: relative;
+                    top:4px;
+                    
+                }
             }
-
-            .secondBotDecorationDos{
-                display: none;
+    
+            .leftButton{
+                font-size: 1.5rem;
+                margin-left:1rem ;
+                color: #000;
+                position: relative;
+                top: 4px;
+                cursor: pointer;
+                
             }
-            
-
-            
-
-            
-
-            
+    
+            .rightButton{
+                font-size: 1.5rem;
+                margin-right:1rem;
+                color: #000;
+                position: relative;
+                top: 4px;
+                cursor:pointer;
+             
+            }
         }
-    }
-
-    .fifthSection__container{
-        height: 80vh;
-        width: 100vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-        .fifthSection__container-topDeco{
-            display: none;
-        }
-
-
-        .fifthSection{
-            height: 100%;
-            width: 100%;
-            background-color: #000;
+    
+        .thirdSection__container{
+            height: 50vh;
+            background-color: #f7f6f4;
             position: relative;
-
-            
-            .fifthSectionVideo__container{
+            display: flex;
+            align-items: center;
+    
+            .thirdSection{
                 height: 100%;
                 width: 100%;
-
+                position: relative;
+    
+                .thirdSection__container-topDeco-black{
+                    display: none;
+                }
+    
+                .thirdSection__container-topDeco{
+                position: absolute;
+                top: -1px;
+                object-fit: contain;
+                width: 100%;
+                
+            }
+    
+            .thirdSection__container-botDeco{
+                position: absolute;
+                bottom: -2px;
+                object-fit: contain;
+                width: 100%;
+            }
+    
+            video{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+    
+            }
+            
+        }
+    
+        .midBarrera__container{
+            height: 5vh;
+            background-color: #fff;
+            .midBarrera{
+                height: 100%;
+                width:100%;
+                position: relative;
+    
+                
+            }
+        }
+        .fourthSection__container{
+            height: 50vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .fourthSection{
+                height: 100%;
+                width: 100%;
+                display: flex;
+                overflow:hidden;
+                justify-content: center;
+                align-items:flex-start;
+                background-image: url(imgs/EvanegelionPoster.png);
+                background-size: cover;
+                background-position: center center;
+                position: relative;
+    
                 video{
+                    display: none;
+                }
+    
+                .secondBotDecoration{
+                    position: absolute;
+                    bottom: -3px;
+                    width: 100%;
+                }
+    
+                .secondBotDecorationDos{
+                    display: none;
+                }
+                
+    
+                
+    
+                
+    
+                
+            }
+        }
+    
+        .fifthSection__container{
+            height: 80vh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+    
+            .fifthSection__container-topDeco{
+                display: none;
+            }
+    
+    
+            .fifthSection{
+                height: 100%;
+                width: 100%;
+                background-color: #000;
+                position: relative;
+    
+                
+                .fifthSectionVideo__container{
                     height: 100%;
                     width: 100%;
-                    object-fit: cover;
+    
+                    video{
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
                 }
             }
         }
-    }
-    .sixthSection__container{
-        display: none;
-    }
-    .sevenSection__container{
-        display: none;
-    }
-
-    .eightSection__container{
-        display: none;
-
-        .eightSectionBotDeco{
+        .sixthSection__container{
             display: none;
         }
-
-        .eightSectionTopDeco{
+        .sevenSection__container{
             display: none;
         }
+    
+        .eightSection__container{
+            display: none;
+    
+            .eightSectionBotDeco{
+                display: none;
+            }
+    
+            .eightSectionTopDeco{
+                display: none;
+            }
+        }
     }
+    
+    #footer{
+        height: 40vh;
+        
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    
+        .footer__container{
+            background-color: #1c1c1c;
+            display: flex;
+            flex-flow: column;
+            align-items: center;
+            justify-content:center;
+            position: relative;
+            height: 100%;
+            width: 100%;
+    
+            .footerTopDecoration{
+                position: absolute;
+                width: 100%;
+                top: -3px;
+            }
+    
+            
+    
+        }
+    }
+    
 }
 
-#footer{
-    height: 40vh;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    .footer__container{
-        background-color: #1c1c1c;
-        display: flex;
-        flex-flow: column;
-        align-items: center;
-        justify-content:center;
-        position: relative;
-        height: 100%;
-        width: 100%;
-
-        .footerTopDecoration{
-            position: absolute;
-            width: 100%;
-            top: 0px;
-        }
-
-        
-
-    }
+.scroll{
+    overflow-y: scroll;
 }
 
 
@@ -1036,6 +1044,10 @@ body{
      justify-content: center;
      width: 100vw;
      position: relative;
+     overflow-y: scroll;
+     z-index: 1;
+
+     
 
      .bodyPicUno,.bodyPicDos,.bodyPicTres,.bodyPicCuatro,.bodyPicCinco,.bodyPicSeis{
         opacity: 1;
@@ -1079,7 +1091,6 @@ body{
      
      
 
-     //LeftWing
      
 
     #header{
@@ -2262,7 +2273,7 @@ body{
             .footerTopDecoration{
                 position: absolute;
                 width: 100%;
-                top: 0px;
+                top: -3px;
             }
     
             
